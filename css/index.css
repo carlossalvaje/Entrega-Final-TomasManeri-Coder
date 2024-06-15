@@ -57,13 +57,14 @@ a {
     height: auto;
 }
 
-/*************************NAVBAR SETTINGS*************************/
+/*************************NAVBAR SETTINGS finish*************************/
 
 
 /*************************MAIN INDEX SETTINGS*************************/
 
 .container-index-img {
     padding: 50px;
+    overflow-x: hidden;
 }
 
 
@@ -72,14 +73,41 @@ a {
     height: auto;
 }
 
+.container-index-img img:hover {
+    transform: scale(1.1);
+}
+
+
+
+/************************************* RAINBOW ANIMATION OF SEPARATION INDEX *************************************/
+
 .separation-main-index {
     background-color: rgb(28, 6, 13);
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 30px;
 }
+
+.separation-main-index:hover {
+    animation: ChangeColorRainbow 3s infinite;
+}
+
+@keyframes ChangeColorRainbow {
+    0% { background-color: #ff0000; } 
+    14.3% { background-color: #ff7f00; } 
+    28.6% { background-color: #ffff00; } 
+    42.9% { background-color: #00ff00; } 
+    57.2% { background-color: #0000ff; } 
+    71.5% { background-color: #4b0082; } 
+    85.8% { background-color: #9400d3; } 
+    100% { background-color: #ff0000; } 
+}
+
+/************************************* RAINBOW ANIMATION OF SEPARATION INDEX finish*************************************/
+/*************************MAIN INDEX SETTINGS  finish*************************/
+
 
 /***********PRODUCT INDEX SETTINGS***********/
 
@@ -104,7 +132,25 @@ a {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+/************************************* RAINBOW ANIMATION OF SEPARATION INDEX *************************************/
 
+.product-index:hover {
+    transform: scale(1.1);
+    animation: ChangeColorRainbowBorder 3s infinite;
+}
+
+@keyframes ChangeColorRainbowBorder {
+    0% { border: solid 4px #ff0000; } 
+    14.3% { border: solid 4px #ff7f00; } 
+    28.6% { border: solid 4px #ffff00; } 
+    42.9% { border: solid 4px #00ff00; } 
+    57.2% { border: solid 4px #0000ff; } 
+    71.5% { border: solid 4px #4b0082; } 
+    85.8% { border: solid 4px #9400d3; } 
+    100% { border: solid 4px #ff0000; } 
+}
+
+/************************************* RAINBOW ANIMATION OF SEPARATION INDEX finish*************************************/
 .img-product-index img {
     width: 100%;
     height: auto;

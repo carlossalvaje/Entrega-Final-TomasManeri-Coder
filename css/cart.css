@@ -83,6 +83,11 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 1s;
+}
+
+.products-img-left:hover {
+    transform: scale(1.2);
 }
 
 .products-img-left img {
