@@ -57,7 +57,7 @@ a {
     height: auto;
 }
 
-.button-light {
+.button-mode {
     display: flex;
     justify-content: space-between;
     width: 70px;
@@ -72,7 +72,7 @@ a {
     align-items: center;
 }
 
-/* .button-dark {
+.button-light.change {
     display: flex;
     justify-content: space-between;
     width: 70px;
@@ -85,9 +85,18 @@ a {
     border: none;
     cursor: pointer;
     align-items: center;
-} */
+} 
+
 
 /*************************NAVBAR SETTINGS finish*************************/
+
+body {
+    transition: 0.3s;
+}
+
+body.dark-mode {
+    background-color: rgb(47, 47, 47);
+}
 
 
 /*************************MAIN INDEX SETTINGS*************************/

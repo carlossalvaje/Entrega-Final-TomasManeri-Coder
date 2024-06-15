@@ -71,7 +71,7 @@ a {
     align-items: center;
 }
 
-/* .button-dark {
+.button-dark {
     display: flex;
     justify-content: space-between;
     width: 70px;
@@ -84,11 +84,17 @@ a {
     border: none;
     cursor: pointer;
     align-items: center;
-} */
+}
 
 /*************************NAVBAR SETTINGS*************************/
 
+body {
+    transition: 0.3s;
+}
 
+body.dark-mode {
+    background-color: rgb(47, 47, 47);
+}
 
 
 
@@ -186,7 +192,7 @@ a {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    background-color: rgb(99, 58, 94);
+    background-color: rgb(40, 14, 37);
     width: 100%;
     height: 650px;
     border-radius: 25px;
