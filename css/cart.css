@@ -57,3 +57,161 @@ a {
 }
 
 /*************************NAVBAR SETTINGS*************************/
+
+
+
+
+
+/*************************MAIN PRODUCTS SETTINGS*************************/
+
+/* LEFT SIDE */
+.container-products {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    height: auto;
+    overflow-x: hidden;
+}
+
+.container-selector-products {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    height: 750px;
+    padding: 50px;
+}
+
+.products-img-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.products-img-left img {
+    padding: 0;
+    width: 400px;
+}
+
+.container-categories {
+    background-color: rgb(40, 14, 37);
+    display: flex;
+    height: 100%;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.button-home-cart {
+    background-color: transparent;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-size: 30px;
+    margin: 30px;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.button-back-cart {
+    background-color: transparent;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-size: 30px;
+    margin: 30px;
+    cursor: pointer;
+    gap: 10px;
+}
+
+
+.list-categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* LEFT SIDE */
+
+/* RIGHT SIDE */
+
+/***********PRODUCTS PRODUCTS SETTINGS***********/
+
+.container-section-products-cart {
+    margin: 0;
+}
+
+.div-section-products-cart {
+    padding: 40px;
+}
+
+.container-all-products-cart {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgb(40, 14, 37);
+    width: 100%;
+    height: 650px;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+/* product desing  */
+
+.product-products-cart {
+    width: auto;
+    height: 200px;
+    background-color: rgb(42, 42, 42);
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+.img-product-products-cart img {
+    width: auto;
+    height: 180px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.product-name-cart {
+    text-align: center;
+}
+
+.product-amount-cart {
+    text-align: center;
+}
+
+.product-cart-price {
+    text-align: center;
+}
+
+.cart-subtotal {
+    text-align: center;
+}
+
+.button-trash-cart {
+    border: none;
+    background-color: rgb(171, 8, 8);
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    border-radius: 10px;
+    margin-right: 30px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+
+
+/***********PRODUCTS PRODUCTS SETTINGS***********/
+
+/* RIGHT SIDE */
