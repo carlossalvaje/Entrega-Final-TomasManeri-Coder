@@ -56,10 +56,40 @@ a {
     height: auto;
 }
 
+.button-light {
+    display: flex;
+    justify-content: space-between;
+    width: 70px;
+    height: fit-content;
+    border-radius: 15px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+}
+
+/* .button-dark {
+    display: flex;
+    justify-content: space-between;
+    width: 70px;
+    height: auto;
+    border-radius: 15px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(75, 40, 61);
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+} */
+
 /*************************NAVBAR SETTINGS*************************/
 
 .body-help {
-    background-color: rgb(107, 84, 92);
+    background-color: rgb(255, 255, 255);
 }
 
 /*************************HELP SETTINGS*************************/
@@ -74,9 +104,9 @@ a {
     row-gap: 50px;
     gap: 50px;
 }
-
+/************************************* RAINBOW ANIMATION OF SHADOW INDEX *************************************/
 .about-help {
-    background-color: rgb(28, 6, 13);
+    background-color: rgb(158, 158, 158);
     border-radius: 25px;
     padding: 20px;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
@@ -85,14 +115,80 @@ a {
     justify-content: center;
 }
 
+.about-help:hover {
+    animation: ChangeColorRainbowShadow 3s infinite;
+}
+
+@keyframes ChangeColorRainbowShadow {
+        0% {
+            box-shadow: 
+                0 0 10px #ff0000, 
+                0 0 20px #ff0000, 
+                0 0 30px #ff0000, 
+                0 0 40px #ff0000;
+        }
+        14.3% {
+            box-shadow: 
+                0 0 10px #ff7f00, 
+                0 0 20px #ff7f00, 
+                0 0 30px #ff7f00, 
+                0 0 40px #ff7f00;
+        }
+        28.6% {
+            box-shadow: 
+                0 0 10px #ffff00, 
+                0 0 20px #ffff00, 
+                0 0 30px #ffff00, 
+                0 0 40px #ffff00;
+        }
+        42.9% {
+            box-shadow: 
+                0 0 10px #00ff00, 
+                0 0 20px #00ff00, 
+                0 0 30px #00ff00, 
+                0 0 40px #00ff00;
+        }
+        57.2% {
+            box-shadow: 
+                0 0 10px #0000ff, 
+                0 0 20px #0000ff, 
+                0 0 30px #0000ff, 
+                0 0 40px #0000ff;
+        }
+        71.5% {
+            box-shadow: 
+                0 0 10px #4b0082, 
+                0 0 20px #4b0082, 
+                0 0 30px #4b0082, 
+                0 0 40px #4b0082;
+        }
+        85.8% {
+            box-shadow: 
+                0 0 10px #9400d3, 
+                0 0 20px #9400d3, 
+                0 0 30px #9400d3, 
+                0 0 40px #9400d3;
+        }
+        100% {
+            box-shadow: 
+                0 0 10px #ff0000, 
+                0 0 20px #ff0000, 
+                0 0 30px #ff0000, 
+                0 0 40px #ff0000;
+        }
+    }
+
+
+/************************************* RAINBOW ANIMATION OF SHADOW INDEX *************************************/
+
 .help-title {
-    color: white;
+    color: rgb(55, 19, 40);
     text-align: center;
     padding-bottom: 30px;
 }
 
 .container-about-help {
-    background-color: rgb(39, 20, 26);
+    background-color: rgb(165, 165, 165);
     padding: 10px;
     border-radius: 20px;
     font-size: 20px;
@@ -100,7 +196,7 @@ a {
 
 .help-description {
     text-align: center;
-    color: wheat;
+    color: rgb(62, 10, 34);
     font-size: 25;
 }
 
@@ -109,5 +205,12 @@ a {
     padding: 10px;
     border-radius: 20px;
     font-size: 20px;
+    padding: 10px;
+}
+
+.help-description-social {
+    text-align: center;
+    color: rgb(106, 18, 41);
+    font-size: 25;
     padding: 10px;
 }
