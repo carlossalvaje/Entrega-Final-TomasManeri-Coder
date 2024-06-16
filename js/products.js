@@ -1,8 +1,10 @@
+/// ARRAY OF PRODUCTS ///
+
 const products = [
     {
         id: "RareSneaker-01",
         title: "Rare Sneaker 01",
-        image: "./img/rare-sneakers-01.jpg",
+        image: "../img/rare-sneakers-01.jpg",
         category: {
             name: "Rare Sneaker",
             id: "RareSneaker"
@@ -12,7 +14,7 @@ const products = [
     {
         id: "RareSneaker-02",
         title: "Rare Sneaker 02",
-        image: "./img/rare-sneakers-02.jpg",
+        image: "../img/rare-sneakers-02.jpg",
         category: {
             name: "Rare Sneaker",
             id: "RareSneaker"
@@ -22,7 +24,7 @@ const products = [
     {
         id: "RareSneaker-03",
         title: "Rare Sneaker 03",
-        image: "./img/rare-sneakers-04.jpg",
+        image: "../img/rare-sneakers-04.jpg",
         category: {
             name: "Rare Sneaker",
             id: "RareSneaker"
@@ -32,7 +34,7 @@ const products = [
     {
         id: "RareSneaker-04",
         title: "Rare Sneaker 04",
-        image: "./img/rare-sneakers-04.jpg",
+        image: "../img/rare-sneakers-04.jpg",
         category: {
             name: "Rare Sneaker",
             id: "RareSneaker"
@@ -42,7 +44,7 @@ const products = [
     {
         id: "RareSneaker-05",
         title: "Rare Sneaker 05",
-        image: "./img/rare-sneakers-05.jpg",
+        image: "../img/rare-sneakers-05.jpg",
         category: {
             name: "Rare Sneaker",
             id: "RareSneaker"
@@ -52,7 +54,7 @@ const products = [
     {
         id: "sporty-sneaker-01",
         title: "Sporty Sneaker 01",
-        image: "./img/sporty-sneakers-01.jpg",
+        image: "../img/sporty-sneakers-01.jpg",
         category: {
             name: "Sporty Sneaker",
             id: "SportySneaker"
@@ -62,7 +64,7 @@ const products = [
     {
         id: "sporty-sneaker-02",
         title: "Sporty Sneaker 02",
-        image: "./img/sporty-sneakers-02.jpg",
+        image: "../img/sporty-sneakers-02.jpg",
         category: {
             name: "Sporty Sneaker",
             id: "SportySneaker"
@@ -72,7 +74,7 @@ const products = [
     {
         id: "sporty-sneaker-03",
         title: "Sporty Sneaker 03",
-        image: "./img/sporty-sneakers-03.jpg",
+        image: "../img/sporty-sneakers-03.jpg",
         category: {
             name: "Sporty Sneaker",
             id: "SportySneaker"
@@ -82,7 +84,7 @@ const products = [
     {
         id: "sporty-sneaker-04",
         title: "Sporty Sneaker 04",
-        image: "./img/sporty-sneakers-04.jpg",
+        image: "../img/sporty-sneakers-04.jpg",
         category: {
             name: "Sporty Sneaker",
             id: "SportySneaker"
@@ -92,7 +94,7 @@ const products = [
     {
         id: "sporty-sneaker-05",
         title: "Sporty Sneaker 05",
-        image: "./img/sporty-sneakers-05.jpg",
+        image: "../img/sporty-sneakers-05.jpg",
         category: {
             name: "Sporty Sneaker",
             id: "SportySneaker"
@@ -102,7 +104,7 @@ const products = [
     {
         id: "urban-sneaker-01",
         title: "Urban Sneaker 01",
-        image: "./img/urban-style-sneakers-01.jpg",
+        image: "../img/urban-style-sneakers-01.jpg",
         category: {
             name: "Urban Sneaker",
             id: "UrbanSneaker"
@@ -112,7 +114,7 @@ const products = [
     {
         id: "urban-sneaker-02",
         title: "Urban Sneaker 02",
-        image: "./img/urban-style-sneakers-02.jpg",
+        image: "../img/urban-style-sneakers-02.jpg",
         category: {
             name: "Urban Sneaker",
             id: "UrbanSneaker"
@@ -122,7 +124,7 @@ const products = [
     {
         id: "urban-sneaker-03",
         title: "Urban Sneaker 03",
-        image: "./img/urban-style-sneakers-03.jpg",
+        image: "../img/urban-style-sneakers-03.jpg",
         category: {
             name: "Urban Sneaker",
             id: "UrbanSneaker"
@@ -132,7 +134,7 @@ const products = [
     {
         id: "urban-sneaker-04",
         title: "Urban Sneaker 04",
-        image: "./img/urban-style-sneakers-04.jpg",
+        image: "../img/urban-style-sneakers-04.jpg",
         category: {
             name: "Urban Sneaker",
             id: "UrbanSneaker"
@@ -142,7 +144,7 @@ const products = [
     {
         id: "urban-sneaker-05",
         title: "Urban Sneaker 05",
-        image: "./img/urban-style-sneakers-05.jpg",
+        image: "../img/urban-style-sneakers-05.jpg",
         category: {
             name: "Urban Sneaker",
             id: "UrbanSneaker"
@@ -150,3 +152,74 @@ const products = [
         price: 480
     }
 ];
+
+/// ARRAY OF PRODUCTS finish ///
+
+
+// SECTION TO CALL DOM //
+const containerAllProducts = document.querySelector("#container-all-products");
+
+const categoryButton = document.querySelectorAll(".category-button");
+
+
+
+// SECTION TO CALL DOM finish //
+
+
+
+
+// FUNCTION TO LOAD PRODUCTS IN PRODUCTS SECTION AND FILTER PRODUCTS WITH NAME//
+
+/*selectedProducts refers to the array "products" */
+
+function loadProducts(selectedProducts) {
+
+    containerAllProducts.innerHTML = "";
+
+    selectedProducts.forEach(product => {
+
+        const div = document.createElement("div");
+        div.classList.add("product-products");
+        div.innerHTML = `
+            <div class="img-product-products">
+                <img src="${product.image}" alt="${product.title}">
+            </div>
+            <div class="info-product-products">
+                <h2 class="name-product-products">${product.title}</h2>
+                <p class="about-product-products">$${product.price}</p>
+                <button class="button-product-products" id="${product.id}">ADD</button>
+            </div>
+        `
+
+        containerAllProducts.append(div);
+
+    })
+
+
+}
+
+loadProducts(products);
+
+// EVENT ON CLICK TYPES OF SHOES //
+
+categoryButton.forEach(button => {
+    button.addEventListener("click", (e) => {
+
+        categoryButton.forEach(button => button.classList.remove("active"));
+
+        e.currentTarget.classList.add("active");
+
+
+
+
+        if (e.currentTarget.id != "All") {
+            const productsButton = products.filter(product => product.category.id === e.currentTarget.id);
+            loadProducts(productsButton);
+        } else {
+            loadProducts(products);
+        }
+        
+
+    })
+})
+

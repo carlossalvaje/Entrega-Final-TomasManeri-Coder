@@ -100,7 +100,7 @@ body {
 }
 
 body.dark-mode {
-    background-color: rgb(47, 47, 47);
+    background-color: rgb(46, 24, 37);
 }
 
 
@@ -146,6 +146,7 @@ body.dark-mode {
     justify-content: center;
     width: 400px;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+    align-items: center;
 }
 
 .category-button {
@@ -154,10 +155,11 @@ body.dark-mode {
     color: white;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     text-align: center;
-    font-size: 30px;
-    margin: 30px;
+    font-size: 25px;
     cursor: pointer;
+    padding: 10px;
 }
 
 .category-button:hover {
@@ -172,9 +174,10 @@ body.dark-mode {
     color: rgb(211, 102, 175);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     text-align: center;
-    font-size: 30px;
-    margin: 30px;
+    font-size: 25px;
+    padding: 10px;
     cursor: pointer;
 }
 
@@ -183,6 +186,8 @@ body.dark-mode {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    position: relative;
+    text-align: center;
 }
 
 /* LEFT SIDE */
