@@ -93,6 +93,10 @@ a {
     align-items: center;
 }
 
+.bi {
+    padding-right: 8px;
+}
+
 /*************************NAVBAR SETTINGS*************************/
 
 body {

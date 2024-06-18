@@ -250,7 +250,11 @@ body.dark-mode {
     cursor: pointer;
 }
 
-
+.empty-cart-title {
+    color: white;
+    font-size: 35px;
+    text-align: center;
+}
 
 
 /***********PRODUCTS PRODUCTS SETTINGS***********/

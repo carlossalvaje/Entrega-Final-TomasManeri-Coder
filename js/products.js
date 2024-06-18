@@ -161,7 +161,9 @@ const containerAllProducts = document.querySelector("#container-all-products");
 
 const categoryButton = document.querySelectorAll(".category-button");
 
+let buttonsAdd = document.querySelectorAll(".button-product-products");
 
+const miniNumber = document.querySelector("#mini-number");
 
 // SECTION TO CALL DOM finish //
 
@@ -195,6 +197,7 @@ function loadProducts(selectedProducts) {
 
     })
 
+    refreshButtonsAdd();
 
 }
 
@@ -221,5 +224,43 @@ categoryButton.forEach(button => {
         
 
     })
-})
+});
 
+
+
+// FUNCTION FOR ADD BUTTONS //
+function refreshButtonsAdd() {
+    buttonsAdd = document.querySelectorAll(".button-product-products");
+
+    buttonsAdd.forEach(button => {
+        button.addEventListener("click", addToCart);
+    });
+}
+
+// ARRAY CART //
+const productsInCart = [];
+
+
+// FUNCTION ADD TO CART //
+function addToCart(e) {
+
+    const ButtonId = e.currentTarget.id;
+    const productsAdd = products.find(product => product.id = ButtonId);
+
+    if(productsInCart.some(product => product.id === ButtonId)) {
+        const index = productsInCart.findIndex(product => product.id === ButtonId);
+        productsInCart[index].amount++;
+    } else {
+        productsAdd.amount = 1;
+        productsInCart.push(productsAdd);
+    }
+    refreshMiniNumber();
+
+    localStorage.setItem("products-in-cart", JSON.stringify(productsInCart));
+}
+
+// FUNCTION CART NUMBER NAVBAR //
+function refreshMiniNumber() {
+    let NewMiniNumber = productsInCart.reduce((acc, product) => acc + product.amount, 0);
+    miniNumber.innerText = NewMiniNumber;
+}
