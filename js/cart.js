@@ -1,14 +1,11 @@
 // WE DECLARE LOCAL STORAGE //
 const productsInCart = JSON.parse(localStorage.getItem("products-in-cart"));
+console.log(productsInCart);
 
 // WE DECLARE DOM
 const containerEmptyCart = document.querySelector("#empty-cart-title");
 const containerProductsCart = document.querySelector("#container-products-cart");
 const containerCartActions = document.querySelector("#cart-actions");
-const ContainerCartPurchased = document.querySelector("#cart-purchased");
-
-
-
 
 
 // CART IF //
@@ -17,11 +14,10 @@ if (productsInCart) {
     containerEmptyCart.classList.add("disabled");
     containerProductsCart.classList.remove("disabled");
     containerCartActions.classList.remove("disabled");
-    ContainerCartPurchased.classList.add("disabled");
 
     productsInCart.forEach(product => {
 
-        const div  = document.createElement("div");
+        const div = document.createElement("div");
         div.classList.add("product-products-cart");
         div.innerHTML = `
             <div class="img-product-products-cart">
@@ -46,10 +42,7 @@ if (productsInCart) {
             <button class="button-trash-cart" id="${product.id}"><i class="bi bi-trash3"></i><button>
         `
         containerProductsCart.append(div);
-
     });
-
-    
 
 
 } else {

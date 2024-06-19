@@ -212,9 +212,6 @@ categoryButton.forEach(button => {
 
         e.currentTarget.classList.add("active");
 
-
-
-
         if (e.currentTarget.id != "All") {
             const productsButton = products.filter(product => product.category.id === e.currentTarget.id);
             loadProducts(productsButton);
@@ -245,7 +242,7 @@ const productsInCart = [];
 function addToCart(e) {
 
     const ButtonId = e.currentTarget.id;
-    const productsAdd = products.find(product => product.id = ButtonId);
+    const productsAdd = products.find(product => product.id === ButtonId);
 
     if(productsInCart.some(product => product.id === ButtonId)) {
         const index = productsInCart.findIndex(product => product.id === ButtonId);
