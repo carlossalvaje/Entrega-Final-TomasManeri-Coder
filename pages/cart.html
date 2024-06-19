@@ -53,11 +53,12 @@
 
             <section class="container-section-products-cart">
                 <div class="div-section-products-cart">
-                    <div class="container-all-products-cart">
 
-                        <h2 class="empty-cart-title">Your Cart is empty <i class="bi bi-emoji-tear"></i></h2>
+                    <h2 id="empty-cart-title" class="empty-cart-title">Your Cart is empty <i class="bi bi-emoji-tear"></i></h2>
+                
+                    <div id="container-products-cart" class="container-all-products-cart disabled">
 
-                        <!-- <div class="product-products-cart">
+                        <div class="product-products-cart">
                             <div class="img-product-products-cart">
                                 <img src="../img/urban-style-sneakers-03.jpg" alt="rare sneaker">
                             </div>
@@ -101,10 +102,27 @@
                                 <p>$300</p>
                             </div>
                             <button class="button-trash-cart"><i class="bi bi-trash3"></i></button>
-                        </div> -->
+                        </div>
 
                     </div>
                 </div>
+
+
+            <div id="cart-actions" class="cart-actions-container disabled">
+                <div class="cart-actions">
+                    <div class="cart-actions-left">
+                        <button class="cart-actions-clear-button">Clear cart</button>
+                    </div>
+                    <div class="cart-actions-right">
+                        <div class="cart-actions-total">
+                            <p>Total:</p>
+                            <p id="Total">600$</p>
+                        </div>
+                        <button class="cart-actions-buy-button">Buy now!</button>
+                    </div>
+                </div>
+            </div>
+
             </section>
 
         </div>
@@ -114,6 +132,7 @@
 
 <script src="../js/darklightmode.js"></script>
 <script src="../js/cart.js"></script>
+<script src="../js/products.js"></script>
 </body>
     
 
